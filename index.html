@@ -37,19 +37,66 @@
         </div>
     </nav>
 
-    <div class="content-area">
-        <main class="container bg-dark text-light rounded page-content">
-            <h1 class="text-center">Welcome to Mars!</h1>
-            <p class="text-center">An exploration trip turns into a battle for survival.</p>
-            <img src="Images/Game1.png" alt="Game photo" class="img-fluid d-block mx-auto">
-            <p class="text-center">Survive and build a factory.</p>
-            <p class="text-center">Build a rocket and return back to your home!</p>
-        </main>
+    <div class="hero-content ms-5 mt-5">
+        <h1 class="MainTitle mb-5">Trip To Mars</h1>
+        <h6 class="MainTitle mb-3">Survive. Make factories. Return to Earth.</h6>
+        <pre class="text-light">After having an accident in the space you land on Mars.
+By gathering materials you are able to save yourself.
+        </pre>
+
+        <button class="btn btn-success mb-5" onclick="alert('No Steam store yet.')">Wishlist on Steam ></button>
+    </div>
+
+    <div class="container-fluid bg-dark text-light mt-5 pb-2">
+        <h1>About the Game</h1>
+        <p>Trip to Mars is survival game where your main goal is to return back to Earth.</p>
+
+        <div id="gameGallery" class="carousel slide" data-bs-ride="false">
+
+    
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="Images/Game1.png"
+                        alt="Trip To Mars electricity system">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Images/Game2.png"
+                        alt="Crystals and gold ore">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Images/Game3.png"
+                        alt="Smelter UI">
+                </div>
+
+            </div>
+
+            
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#gameGallery"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+    
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#gameGallery"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
     </div>
 
     <footer class="bg-dark fixed-bottom site-footer">
-        <h2 class="text-light">Test</h2>
-        &copy; Tilen
+        <span class="copyright">&copy; Made by Tilen Šimenc 2026</span> 
     </footer>
 </body>
 </html>
