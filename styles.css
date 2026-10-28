@@ -1,0 +1,36 @@
+body {
+    background-image: url("Images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 56px;
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+
+.nav-elem img {
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+
+.content-area {
+    min-height: calc(100vh - 56px - 70px);
+    display: flex;
+    align-items: center;
+}
+
+.nav-elem {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-elem:hover {
+    color:rgb(158, 153, 153);
+    opacity: 0.8;
+}
