@@ -1,0 +1,7 @@
+.shop_items {
+    background-color: white;
+}
+
+.shop_items:hover {
+    background-color: rgb(213, 139, 216);
+}
