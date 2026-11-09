@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class Shop {
     cart: any[] = [];
     
+    skupnaCena: number = 0;
 
 
     addToCart(product: any) {
@@ -21,7 +22,9 @@ export class Shop {
         } else {
             this.cart.push({product:product, quantity:1});
         }
-        console.log(this.cart);
+
+        this.skupnaCena += Math.round(Number(product.cena)*100)
+        //console.log((this.skupnaCena/100).toFixed(2));
     }
 
 
@@ -29,25 +32,25 @@ export class Shop {
       {
           "id" : 0,
           "naziv" : "Trip to Mars T-Shirt",
-          "cena" : "25.90€",
+          "cena" : "25.90",
           "image" : "Images/SpaceShirt.png"
       },
       {
           "id" : 1,
           "naziv" : "Trip to Mars Mug",
-          "cena" : "5.90€",
+          "cena" : "5.90",
           "image" : "Images/MugImage.jpg"
       },
       {
           "id" : 2,
           "naziv" : "Trip to Mars Hoodie",
-          "cena" : "35.90€",
+          "cena" : "35.90",
           "image" : "Images/SpaceHoodie.jpg"
       },
       {
           "id" : 3,
           "naziv" : "Trip to Mars Poster",
-          "cena" : "20.00€",
+          "cena" : "20.00",
           "image" : "Images/SpacePoster.jpg"
       }
   ]

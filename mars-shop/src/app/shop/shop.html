@@ -19,7 +19,7 @@ We offer big variety of items from collectibles to other useful things.
                 <div class="card shop_items" (click)="addToCart(product)">
                     <img class="card-img-top" src={{product.image}} width="50px" alt="Space Tshirt">
                     <h4 class="card-title p-2">{{product.naziv}}</h4>
-                    <h5 class="card-body">{{product.cena}}</h5>
+                    <h5 class="card-body">{{product.cena + "€"}}</h5>
                 </div>
             </div>
             }
@@ -33,11 +33,13 @@ We offer big variety of items from collectibles to other useful things.
                 <div class="card">
                     <img class="card-img-top" src={{izdelek.product.image}} width="50px" alt="Space Tshirt">
                     <h4 class="card-title p-2">{{izdelek.product.naziv}}</h4>
-                    <h5 class="card-body">{{izdelek.product.cena}}</h5>
+                    <h5 class="card-body">{{izdelek.product.cena  + "€"}}</h5>
                     <h5 class="card-body">{{izdelek.quantity}}</h5>
                 </div>
                 
             }
         </div>
+
+        <h1>{{skupnaCena/100  + "€"}}</h1>
     </div>
 </div>
