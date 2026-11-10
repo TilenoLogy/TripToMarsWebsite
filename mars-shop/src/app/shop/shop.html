@@ -12,43 +12,52 @@ We offer big variety of items from collectibles to other useful things.
     <p>Trip to Mars is survival game where your main goal is to return back to Earth.</p>
 
     <div class="container">
-    
-        <div class="row row-cols-4 row-cols-sm-2 row-cols-lg-3 g-4">
-            @for (product of products; track product.id) {
-            <div class="col">
-                <div class="card shop_items h-100" (click)="addToCart(product)">
-                    <img class="card-img-top h-100" src={{product.image}} width="50px" alt="Space Tshirt">
-                    <h4 class="card-title p-2">{{product.naziv}}</h4>
-                    <h5 class="card-body">{{product.cena + "€"}}</h5>
-                </div>
-            </div>
-            }
-        </div>
-
-
-        <br><br>
-
-        <div class="container bg-primary">
-            <h1>Your Cart</h1>
-            <div class="d-flex flex-column gap-3">
-            @for (izdelek of cart; track izdelek.product.id) {
-                <div class="card card-item">
-                    <div class="row align-items-center">
-                        <div class="col-4 col-md-3">
-                            <img class="img-fluid card-img-top cartlist" src={{izdelek.product.image}} alt="Space Tshirt">
-                        </div>
-                        <div class="col-8 col-md-9">
-                            <h4 class="card-title p-2">{{izdelek.product.naziv}}</h4>
-                            <h5 class="card-body">{{izdelek.product.cena  + "€"}}</h5>
-                            <h5 class="card-body">{{izdelek.quantity}}</h5>
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                    @for (product of products; track product.id) {
+                    <div class="col">
+                        <div class="card shop_items h-100" (click)="addToCart(product)">
+                            <img class="card-img-top h-100" [src]="product.image" width="50px" alt="Space Tshirt">
+                            <h4 class="card-title p-2">{{product.naziv}}</h4>
+                            <h5 class="card-body">{{product.cena + "€"}}</h5>
                         </div>
                     </div>
+                    }
                 </div>
-                
-            }
             </div>
-            <h1>Total: {{skupnaCena/100  + "€"}}</h1>
-        </div>
 
+            <div class="col-lg-4">
+                <div class="cart bg-primary">
+                    <h1>Your Cart</h1>
+                    <div class="d-flex flex-column gap-3">
+                    @for (izdelek of cart; track izdelek.product.id) {
+                        <div class="card card-item">
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img class="img-fluid cartlist" [src]="izdelek.product.image" alt="Space Tshirt">
+                                </div>
+                                <div class="col-8">
+                                    <h4 class="card-title p-2">{{izdelek.product.naziv}}</h4>
+                                    <h5 class="card-body">{{izdelek.product.cena + "€"}}</h5>
+                                    <div class="quantity-controls" aria-label="Quantity controls">
+                                        <button class="btn btn-sm btn-secondary" type="button"
+                                            (click)="decreaseQuantity(izdelek.product.id)"
+                                            [attr.aria-label]="'Remove one ' + izdelek.product.naziv">&lt;</button>
+                                        <span class="quantity">{{izdelek.quantity}}</span>
+                                        <button class="btn btn-sm btn-secondary" type="button"
+                                            (click)="increaseQuantity(izdelek.product.id)"
+                                            [attr.aria-label]="'Add one ' + izdelek.product.naziv">&gt;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    </div>
+                    <h1>Total: {{skupnaCena / 100 + "€"}}</h1>
+                    <button class="btn btn-success mb-5" onclick="alert('Buying is not supported yet.')">Buy ></button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

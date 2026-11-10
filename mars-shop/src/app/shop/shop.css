@@ -11,3 +11,21 @@
     height:120px;
     object-fit: contain;
 }
+
+.cart {
+    padding: 1rem;
+    position: sticky;
+    top: 5rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 0.75rem 0.75rem;
+}
+
+.quantity {
+    min-width: 2rem;
+    text-align: center;
+}
