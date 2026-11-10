@@ -1,0 +1,37 @@
+<div class="hero-content ms-5 mt-5">
+        <h1 class="MainTitle mb-5">Game wiki</h1>
+        <h6 class="MainTitle mb-3">Become a professional at surviving!</h6>
+        <pre class="text-light">Learn the basics about surviving in space.
+        </pre>
+</div>
+
+<div class="wiki-content container-fluid bg-dark text-light mt-5 pb-2">
+    <h1>Resources</h1>
+    <div class="row g-4">
+        <div class="col-md-3 col-lg-2">
+            <div class="wiki-buttons" role="tablist" aria-label="Wiki categories">
+                @for (tab of tabs; track tab.id) {
+                <button class="btn wiki-button" [class.active]="selectedTab === tab.id"
+                    type="button" role="tab" [attr.aria-selected]="selectedTab === tab.id"
+                    (click)="selectTab(tab.id)">
+                    {{tab.label}}
+                </button>
+                }
+            </div>
+        </div>
+
+        <div class="col-md-9 col-lg-10">
+            <div class="wiki-cards">
+                @for (card of selectedCards; track card.title) {
+                <article class="card wiki-card">
+                    <div class="card-body">
+                        <img class="card-img-top" [src]="card.image" [alt]="card.title">
+                        <h2 class="card-title">{{card.title}}</h2>
+                        <p class="card-text">{{card.description}}</p>
+                    </div>
+                </article>
+                }
+            </div>
+        </div>
+    </div>
+</div>
