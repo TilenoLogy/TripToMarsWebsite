@@ -16,8 +16,8 @@ We offer big variety of items from collectibles to other useful things.
         <div class="row row-cols-4 row-cols-sm-2 row-cols-lg-3 g-4">
             @for (product of products; track product.id) {
             <div class="col">
-                <div class="card shop_items" (click)="addToCart(product)">
-                    <img class="card-img-top" src={{product.image}} width="50px" alt="Space Tshirt">
+                <div class="card shop_items h-100" (click)="addToCart(product)">
+                    <img class="card-img-top h-100" src={{product.image}} width="50px" alt="Space Tshirt">
                     <h4 class="card-title p-2">{{product.naziv}}</h4>
                     <h5 class="card-body">{{product.cena + "€"}}</h5>
                 </div>
@@ -26,20 +26,29 @@ We offer big variety of items from collectibles to other useful things.
         </div>
 
 
-        <div class="row">
+        <br><br>
+
+        <div class="container bg-primary">
             <h1>Your Cart</h1>
+            <div class="d-flex flex-column gap-3">
             @for (izdelek of cart; track izdelek.product.id) {
-                
-                <div class="card">
-                    <img class="card-img-top" src={{izdelek.product.image}} width="50px" alt="Space Tshirt">
-                    <h4 class="card-title p-2">{{izdelek.product.naziv}}</h4>
-                    <h5 class="card-body">{{izdelek.product.cena  + "€"}}</h5>
-                    <h5 class="card-body">{{izdelek.quantity}}</h5>
+                <div class="card card-item">
+                    <div class="row align-items-center">
+                        <div class="col-4 col-md-3">
+                            <img class="img-fluid card-img-top cartlist" src={{izdelek.product.image}} alt="Space Tshirt">
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <h4 class="card-title p-2">{{izdelek.product.naziv}}</h4>
+                            <h5 class="card-body">{{izdelek.product.cena  + "€"}}</h5>
+                            <h5 class="card-body">{{izdelek.quantity}}</h5>
+                        </div>
+                    </div>
                 </div>
                 
             }
+            </div>
+            <h1>Total: {{skupnaCena/100  + "€"}}</h1>
         </div>
 
-        <h1>{{skupnaCena/100  + "€"}}</h1>
     </div>
 </div>
