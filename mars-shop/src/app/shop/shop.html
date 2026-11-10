@@ -28,7 +28,7 @@ We offer big variety of items from collectibles to other useful things.
             </div>
 
             <div class="col-lg-4">
-                <div class="cart bg-primary">
+                <div class="cart cart-tab">
                     <h1>Your Cart</h1>
                     <div class="d-flex flex-column gap-3">
                     @for (izdelek of cart; track izdelek.product.id) {
@@ -54,7 +54,7 @@ We offer big variety of items from collectibles to other useful things.
                         </div>
                     }
                     </div>
-                    <h1>Total: {{skupnaCena / 100 + "€"}}</h1>
+                    <h5>Total: {{skupnaCena / 100 + "€"}}</h5>
                     <button class="btn btn-success mb-5" onclick="alert('Buying is not supported yet.')">Buy ></button>
                 </div>
             </div>
