@@ -1,0 +1,66 @@
+[
+  {
+    "id": "basics",
+    "label": "Basics",
+    "cards": [
+      {
+        "title": "Survival basics",
+        "description": "Learn how to manage your oxygen, health, and supplies while exploring Mars.",
+        "image": "Images/Game1.png"
+      },
+      {
+        "title": "Exploration",
+        "description": "Use your map and keep an eye out for dangerous terrain during expeditions.",
+        "image": "Images/Game2.png"
+      }
+    ]
+  },
+  {
+    "id": "resources",
+    "label": "Resources",
+    "cards": [
+      {
+        "title": "Ice Cubes",
+        "description": "Dropped by ice crystal.",
+        "image": "Images/Resources/IceCrystal.png"
+      },
+      {
+        "title": "Coal Chunk",
+        "description": "Used to smelt ores.",
+        "image": "Images/Resources/CoalOre.png"
+      }
+    ]
+  },
+  {
+    "id": "crafting",
+    "label": "Crafting recipes",
+    "cards": [
+      {
+        "title": "Basic tools",
+        "description": "Combine common materials to create tools for gathering and exploration.",
+        "image": "Images/SpaceShirt.png"
+      },
+      {
+        "title": "Survival supplies",
+        "description": "Craft supplies that help you stay safe and keep moving across the planet.",
+        "image": "Images/MugImage.jpg"
+      }
+    ]
+  },
+  {
+    "id": "machines",
+    "label": "Machines",
+    "cards": [
+      {
+        "title": "Resource processor",
+        "description": "Process raw materials into useful components for your equipment.",
+        "image": "Images/SpaceHoodie.jpg"
+      },
+      {
+        "title": "Oxygen generator",
+        "description": "Generate oxygen and extend the amount of time you can spend outside.",
+        "image": "Images/SpacePoster.jpg"
+      }
+    ]
+  }
+]
