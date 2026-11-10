@@ -5,12 +5,17 @@
     "cards": [
       {
         "title": "Survival basics",
-        "description": "Learn how to manage your oxygen, health, and supplies while exploring Mars.",
+        "description": "Preserve your oxygen, health and try to gather new resources",
         "image": "Images/Game1.png"
       },
       {
+        "title": "Oxygen",
+        "description": "The key to your success, use it wisely, you can gather it back by mining ice cubes and using them inside oxygen generator.",
+        "image": "Images/Game2.png"
+      },
+      {
         "title": "Exploration",
-        "description": "Use your map and keep an eye out for dangerous terrain during expeditions.",
+        "description": "Exploration is a smart choice for finding new resources, but be sure that you have enough oxygen for your expedition.",
         "image": "Images/Game2.png"
       }
     ]
@@ -28,7 +33,28 @@
         "title": "Coal Chunk",
         "description": "Used to smelt ores.",
         "image": "Images/Resources/CoalOre.png"
+      },
+      {
+        "title": "Iron Chunk",
+        "description": "Iron ore that can be smelted into the ingot.",
+        "image": "Images/Resources/CoalOre.png"
+      },
+      {
+        "title": "Copper Chunk",
+        "description": "Copper ore that can be smelted into the ingot.",
+        "image": "Images/Resources/CoalOre.png"
+      },
+      {
+        "title": "Iron Ingot",
+        "description": "Basic metal, useful for a lot of recipes.",
+        "image": "Images/Resources/CoalOre.png"
+      },
+      {
+        "title": "Basic Wire",
+        "description": "Used to connect machines and electricity circuits together.",
+        "image": "Images/Resources/CoalOre.png"
       }
+
     ]
   },
   {
@@ -52,14 +78,19 @@
     "label": "Machines",
     "cards": [
       {
-        "title": "Resource processor",
-        "description": "Process raw materials into useful components for your equipment.",
+        "title": "Basic solar panel",
+        "description": "Machine that produces the electricity. Can be connected using wires.",
         "image": "Images/SpaceHoodie.jpg"
       },
       {
         "title": "Oxygen generator",
-        "description": "Generate oxygen and extend the amount of time you can spend outside.",
+        "description": "Generate oxygen and extend the amount of time you can spend outside. It uses ice cubes and electricity or coal",
         "image": "Images/SpacePoster.jpg"
+      },
+      {
+        "title": "Battery",
+        "description": "Used to store electricity.",
+        "image": "Images/Resources/CoalOre.png"
       }
     ]
   }
