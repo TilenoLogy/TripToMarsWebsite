@@ -2,16 +2,59 @@
   {
     "id": "posts",
     "label": "Posts",
-    "cards": []
+    "cards": [
+      {
+        "title": "Welcome to the Trip to Mars",
+        "description": "Our first playable build is now ready. Step out of the lander, establish your first shelter, and decide how far you are willing to travel before the oxygen warning starts flashing.",
+        "image": "Images/Background.png"
+      },
+      {
+        "title": "Building Mars, One System at a Time",
+        "description": "This week we connected exploration, mining, and base construction into one survival loop. Every trip beyond your shelter now has a purpose: bring back ice, find useful ore, and make the next expedition safer.",
+        "image": "Images/Game1.png"
+      },
+      {
+        "title": "Prototype is live",
+        "description": "After a long time of working on this game, we can happily announce that the prototype of our game is out and ready to play!",
+        "image": "Images/SpaceShirt.png"
+      }
+    ]
   },
   {
     "id": "updates",
     "label": "Updates",
-    "cards": []
+    "cards": [
+      {
+        "title": "Industrialization",
+        "description": "In this update the electricity grids have been added. Using electricity you are one step closer to automatization. There are also machines of electricity variant.",
+        "image": "Images/Game2.png"
+      },
+      {
+        "title": "Tools And Items",
+        "description": "In this update pickaxes and upgrades for basic pickaxe has been added. The same goes for oxygen tanks. There have also been inventory and crafting table reworks.",
+        "image": "Images/Game3.png"
+      },
+      {
+        "title": "Survive without air",
+        "description": "Survival elements such as oxygen has been introduced in this update. You can also refill the oxygen using mining the ice cubes and putting them into oxygen generator.",
+        "image": "Images/Background.png"
+      }
+    ]
   },
   {
-  "id": "patches",
+    "id": "patches",
     "label": "Patches",
-    "cards": []
+    "cards": [
+      {
+        "title": "Patch 0.4.1 - Power Stability",
+        "description": "Solar panels can now correctly connect to the grid and produce the electricity..",
+        "image": "Images/Game2.png"
+      },
+      {
+        "title": "Patch 0.4.0 - Resource Pass",
+        "description": "Rebalanced ore deposits, improved mining feedback, and fixed resource nodes respawning after mining them.",
+        "image": "Images/SpaceHoodie.jpg"
+      }
+    ]
   }
 ]

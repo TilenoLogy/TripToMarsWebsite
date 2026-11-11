@@ -1,4 +1,23 @@
 
+.devlog-content > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.devlog-content .row {
+    row-gap: 1.5rem;
+}
+
+.wiki-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.wiki-card {
+    width: 100%;
+    margin-bottom: 0;
+}
+
 .devlog-buttons {
     display: flex;
     flex-direction: column;
