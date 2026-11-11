@@ -1,0 +1,29 @@
+
+.devlog-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.75);
+}
+
+.devlog-button {
+    width: 100%;
+    min-height: 2.75rem;
+    border: 1px solid rgba(245, 160, 92, 0.55);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #f5d7b2;
+    font-weight: 600;
+    text-align: left;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.devlog-button:hover,
+.devlog-button.active {
+    border-color: #f5a05c;
+    background: linear-gradient(90deg, #a84432, #6f3045);
+    color: white;
+}

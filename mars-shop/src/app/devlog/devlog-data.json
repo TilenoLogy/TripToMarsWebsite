@@ -1,0 +1,17 @@
+[
+  {
+    "id": "posts",
+    "label": "Posts",
+    "cards": []
+  },
+  {
+    "id": "updates",
+    "label": "Updates",
+    "cards": []
+  },
+  {
+  "id": "patches",
+    "label": "Patches",
+    "cards": []
+  }
+]

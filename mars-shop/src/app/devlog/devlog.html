@@ -1,1 +1,24 @@
+<div class="hero-content ms-5 mt-5">
+        <h1 class="MainTitle mb-5">Devlog</h1>
+        <h6 class="MainTitle mb-3">Updates, Behind the scenes and more!</h6>
+        <pre class="text-light">Learn about the newest updates and behind the scenes.
+        </pre>
+</div>
+¨
 
+<div class="devlog-content container-fluid bg-dark text-light mt-5 pb-2">
+    <h1>Updates</h1>
+    <div class="row g-4">
+        <div class="col-md-3 col-lg-2">
+            <div class="devlog-buttons" role="tablist" aria-label="Devlog categories">
+                @for (tab of tabs; track tab.id) {
+                <button class="btn devlog-button" [class.active]="selectedTab === tab.id"
+                    type="button" role="tab" [attr.aria-selected]="selectedTab === tab.id"
+                    (click)="selectTab(tab.id)">
+                    {{tab.label}}
+                </button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
