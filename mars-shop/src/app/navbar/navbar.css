@@ -1,0 +1,7 @@
+.nav-link:hover,
+.nav-link.active,
+.nav_button:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 2px;
+}
