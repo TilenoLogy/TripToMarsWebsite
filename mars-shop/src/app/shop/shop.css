@@ -40,3 +40,125 @@
     min-width: 2rem;
     text-align: center;
 }
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 1.1rem;
+}
+
+.cart-total strong {
+    color: #f5a05c;
+    font-size: 1.35rem;
+}
+
+.shop-info {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(245, 160, 92, 0.4);
+    border-radius: 0.65rem;
+    background: rgba(8, 15, 30, 0.6);
+}
+
+.shop-info h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+.form-intro {
+    margin: 0.35rem 0 1rem;
+    color: #c9c6cd;
+    font-size: 0.85rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.form-field label,
+.payment-options legend {
+    color: #f5d7b2;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.form-field input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.35rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #172033;
+}
+
+.form-field input:focus {
+    border-color: #f5a05c;
+    outline: 2px solid rgba(245, 160, 92, 0.25);
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 0;
+}
+
+.payment-options label {
+    color: #e8e4e9;
+    font-size: 0.85rem;
+}
+
+.payment-options input {
+    margin-right: 0.45rem;
+    accent-color: #f5a05c;
+}
+
+.checkout-button {
+    width: 100%;
+}
+
+.order-confirmation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(111, 190, 133, 0.55);
+    border-radius: 0.5rem;
+    background: rgba(39, 104, 61, 0.35);
+    color: #dff7e5;
+    font-size: 0.85rem;
+}
+
+.order-error {
+    margin: 0.75rem 0 0;
+    padding: 0.65rem;
+    border: 1px solid rgba(220, 100, 100, 0.55);
+    border-radius: 0.45rem;
+    background: rgba(120, 35, 35, 0.35);
+    color: #ffd8d8;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

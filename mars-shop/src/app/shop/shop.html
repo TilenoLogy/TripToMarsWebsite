@@ -53,8 +53,63 @@ We offer big variety of items from collectibles to other useful things.
                         </div>
                     }
                     </div>
-                    <h5>Total: {{skupnaCena / 100 + "€"}}</h5>
-                    <button class="btn btn-success mb-5" onclick="alert('Buying is not supported yet.')">Buy ></button>
+                    <div class="cart-total">
+                        <span>Total</span>
+                        <strong>{{skupnaCena / 100 + "€"}}</strong>
+                    </div>
+
+                    @if (orderSubmitted) {
+                    <div class="order-confirmation" role="status">
+                        <strong>Order details received!</strong>
+                        <span>We will prepare your order for {{orderDetails.firstName}}.</span>
+                    </div>
+                    } @else {
+                    @if (orderError) {
+                    <p class="order-error" role="alert">{{orderError}}</p>
+                    }
+                    <form #orderForm="ngForm" (ngSubmit)="submitOrder()" class="shop-info">
+                        <h2>Delivery details</h2>
+                        <p class="form-intro">Tell us where to send your Mars supplies.</p>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="firstName">Name</label>
+                                <input id="firstName" name="firstName" type="text" [(ngModel)]="orderDetails.firstName"
+                                    required autocomplete="given-name">
+                            </div>
+                            <div class="form-field">
+                                <label for="lastName">Surname</label>
+                                <input id="lastName" name="lastName" type="text" [(ngModel)]="orderDetails.lastName"
+                                    required autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="location">Delivery location</label>
+                            <input id="location" name="location" type="text" [(ngModel)]="orderDetails.location"
+                                required autocomplete="street-address" placeholder="Street, city, country">
+                        </div>
+
+                        <fieldset class="payment-options">
+                            <legend>Payment method</legend>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="card"
+                                    [(ngModel)]="orderDetails.paymentMethod">
+                                Pay by card
+                            </label>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="delivery"
+                                    [(ngModel)]="orderDetails.paymentMethod">
+                                Pay when it arrives
+                            </label>
+                        </fieldset>
+
+                        <button class="btn btn-success checkout-button" type="submit"
+                            [disabled]="cart.length === 0 || orderForm.invalid || orderSubmitting">
+                            {{orderSubmitting ? 'Saving order...' : 'Place order'}}
+                        </button>
+                    </form>
+                    }
                 </div>
             </div>
         </div>
